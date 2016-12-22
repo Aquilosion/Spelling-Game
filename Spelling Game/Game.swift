@@ -65,7 +65,7 @@ final class Game {
 		if let character = nextCharacter {
 			currentWord += String(character)
 			
-			if let letter = dictionary.letterForWord(currentWord), letter.isCompleteWord {
+			if let letter = dictionary.letterForWord(currentWord), letter.isCompleteWord && currentWord.characters.count >= 4 {
 				print("\(currentPlayer.name) completed a word: \(currentWord)")
 				winner = previousPlayer
 			}
