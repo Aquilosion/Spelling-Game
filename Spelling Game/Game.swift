@@ -66,7 +66,7 @@ final class Game {
 			currentWord += String(character)
 			
 			if let letter = dictionary.letterForWord(currentWord), letter.isCompleteWord {
-				print("\(currentPlayer.name) completed a word!")
+				print("\(currentPlayer.name) completed a word: \(currentWord)")
 				winner = previousPlayer
 			}
 		} else {
